@@ -1,0 +1,255 @@
+:root{
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xxlg: 25px;
+    --ligth-pink: #c7c7c7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold{
+    font-weight: bold;
+}
+.dark-mode {
+    color: white;
+    background-color: #15202B;
+  }
+.seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Asap', sans-serif;
+  }
+/* Navbar */
+.navbar{
+    padding: 2rem;
+}
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+/*############        principal     ##############*/
+section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+h1{
+    font-size:2.5rem;
+}
+.nombre{
+    font-weight: 600;
+}
+.principal-section{
+    min-height: 450px;
+    text-align:center;
+    font-family: 'Asap', sans-serif;
+    position: relative;
+}
+.print {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+}
+.principal-section hr{
+    border:none;
+    height: 2px;
+    color: #333;
+    background-color: #333;
+}
+.principal{
+    padding:3rem;
+    height: 100vh;
+}
+
+.foto{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+.principal h2{
+    font-size:1.5rem;
+    color:#615151;
+}
+.contenedor{
+    text-align: center;
+}
+.servicio-social{
+    border-top: 1px solid #f55;
+}
+.titulo-dgei{
+    text-align: left;
+}
+.actividades{
+    text-align: justify;
+}
+.contenedor .formacion{
+    font-size: var(--lg);
+}
+.formacion p:nth-child(2), p:nth-child(3), p:nth-child(4){
+    margin-bottom: -3px;
+}
+.item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:10px;
+    align-items: center;
+} 
+.item .texto-habilidades{
+    text-align: left;
+}
+.item i{
+    font-size: 35px;
+}
+.item p:nth-child(1){
+    margin-bottom: -5px;
+}
+
+/* ######           conocimientos       #########*/
+.conocimientos{
+    padding: 40px;
+}
+.conocimientos h2{
+    font-family: 'Asap', sans-serif;
+    font-weight:600;
+}
+.conocimientos .columna{
+    padding: 20px;
+    border: 2px solid #6464644d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+.conocimientos .columna:hover{
+    color: white;
+    background-color: #333;
+}
+.conocimientos .titulo{
+    font-size: var(--xxlg);
+    margin: 10px 0;
+}
+.columna img{
+    height: 12rem;
+    width: 12rem;
+}
+.badges-contenedor{
+    font-size: var(--lg);
+    margin: 10px 0;
+}
+.badge{
+    margin: 5px;
+}
+
+/* ##########          proyectos   ######### */
+.proyectos{
+    padding: 40px;
+}
+.proyectos h2{
+    font-family: 'Asap', sans-serif;
+    font-weight:600;
+}
+.proyectos-contenedor{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+.proyecto img{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
+}
+.overlay{
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.overlay p{
+    font-size: var(--xxlg);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.proyecto{
+    position: relative;
+}
+.proyecto:hover img{
+    opacity: 0.2;
+}
+.proyecto:hover .overlay{
+    opacity: 1;
+}
+.ovarlay .enlace-git{
+    display: flex;
+}
+.overlay i{
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+/* ##########    Pie de pagina ###########*/
+footer {
+    min-height: 300px;
+}
+
+.redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+} 
+.redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+.redes-sociales a:hover {
+    color: #FFF;
+    background-color: #006299;
+    border-color: #006299;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+
+/* ##########      breakpoints     ############ */
+@media screen and (max-width: 575px){
+    .navbar-brand{
+        display: none;
+    }
+}
+/* @media screen and (min-width:700px){
+    .skills img{
+        max-width: 600px;
+    }
+} */
+@media screen and(max-width:400px) {
+    .overlay p{
+        font-size: var(--lg);
+    }
+    .overlay i{
+        font-size: 40px;
+    }
+}
