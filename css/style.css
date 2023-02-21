@@ -79,6 +79,10 @@ h1 {
   color: #615151;
 }
 /* ######                       Formacion second       #########*/
+.second-section {
+  border-top: 1px solid #6464644d;
+}
+
 .second-section .grid-style {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -116,6 +120,7 @@ p:nth-child(4) {
 /* ######           Habilidades second       #########*/
 .habilidades {
   padding-left: 10px;
+  padding-right: 5px;
   grid-row: 1/3;
 }
 
@@ -212,11 +217,14 @@ footer {
   }
 }
 
-@media screen and(max-width:400px) {
-  .overlay p {
-    font-size: var(--lg);
+@media screen and (max-width: 666px) {
+  .second-section .grid-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .overlay i {
-    font-size: 40px;
+  .formacion .servicio-social {
+    padding: 5px 30px 5px;
   }
 }
