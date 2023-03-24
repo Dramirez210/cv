@@ -1,230 +1,264 @@
+
 :root {
-  --sm: 14px;
-  --md: 16px;
-  --lg: 18px;
-  --xxlg: 25px;
-  --ligth-pink: #c7c7c7;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xxlg: 25px;
+    --normal-font-size: 1rem;
+    --lg-font-size: 2rem;
+    --ligth-pink: #c7c7c7;
+    --dark-letter: #15202b;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.bold {
-  font-weight: bold;
-}
-.dark-mode {
-  color: white;
-  background-color: #15202b;
-}
-.seccion-titulo {
-  font-size: 2rem;
-  padding: 15px 0;
-  font-family: "Asap", sans-serif;
-}
-/* Navbar */
-.navbar {
-  padding: 2rem;
-}
-.navbar-collapse {
-  align-items: center;
-  justify-content: space-between;
-}
-/*############        principal     ##############*/
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-h1 {
-  font-size: 2.5rem;
-}
-.nombre {
-  font-weight: 600;
-}
-.principal-section {
-  min-height: 450px;
-  text-align: center;
-  font-family: "Asap", sans-serif;
-  position: relative;
-}
-/* .print {
-    position: absolute;
-    top: 1rem;
-    right: 4rem;
-} */
-.principal-section hr {
-  border: none;
-  height: 2px;
-  color: #333;
-  background-color: #333;
-}
-.principal {
-  padding: 3rem;
-  height: 100vh;
-}
-
-.foto {
-  border-radius: 50%;
-  width: 250px;
-  height: 280px;
-  margin: 20px;
-  -webkit-transform: rotate(3deg);
-}
-.principal h2 {
-  font-size: 1.5rem;
-  color: #615151;
-}
-/* ######                       Formacion second       #########*/
-.second-section {
-  border-top: 1px solid #6464644d;
-}
-
-.second-section .grid-style {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 40% 60%;
-}
-
-.formacion {
-  text-align: center;
-  grid-column: 1;
-  grid-row: 1/3;
-}
-
-.formacion .servicio-social {
-  padding: 5px 20px 5px;
-}
-
-.servicio-social {
-  border-top: 1px solid #f55;
-}
-.titulo-dgei {
-  text-align: left;
-}
-.actividades {
-  text-align: justify;
-}
-.contenedor .formacion {
-  font-size: var(--lg);
-}
-.formacion p:nth-child(2),
-p:nth-child(3),
-p:nth-child(4) {
-  margin-bottom: -3px;
-}
-
-/* ######           Habilidades second       #########*/
-.habilidades {
-  padding-left: 10px;
-  padding-right: 5px;
-  grid-row: 1/3;
-}
-
-.item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
-  align-items: center;
-}
-.item .texto-habilidades {
-  text-align: left;
-}
-.item i {
-  font-size: 35px;
-}
-.item p:nth-child(1) {
-  margin-bottom: -5px;
-}
-
-/* ######           conocimientos       #########*/
-.conocimientos {
-  padding: 40px;
-}
-.conocimientos h2 {
-  font-family: "Asap", sans-serif;
-  font-weight: 600;
-}
-.conocimientos .columna {
-  padding: 20px;
-  border: 2px solid #6464644d;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  transition: all 0.2s ease-in;
-}
-.conocimientos .columna:hover {
-  color: white;
-  background-color: #333;
-}
-.conocimientos .titulo {
-  font-size: var(--xxlg);
-  margin: 10px 0;
-}
-.columna img {
-  height: 12rem;
-  width: 12rem;
-}
-.badges-contenedor {
-  font-size: var(--lg);
-  margin: 10px 0;
-}
-.badge {
-  margin: 5px;
-}
-
-/* ##########    Pie de pagina ###########*/
-footer {
-  min-height: 300px;
-}
-
-.redes-sociales a {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  margin: 10px;
-  border: 2px solid white;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-}
-.redes-sociales i {
-  color: white;
-  font-size: 1.5rem;
-  transition: all 0.2s ease-in;
-}
-.redes-sociales a:hover {
-  color: #fff;
-  background-color: #006299;
-  border-color: #006299;
-}
-
-.derechos-de-autor {
-  font-size: 15px;
-  color: #aeaeae;
-  padding: 20px;
-}
-
-/* ##########      breakpoints     ############ */
-@media screen and (max-width: 575px) {
-  .navbar-brand {
-    display: none;
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-
-@media screen and (max-width: 666px) {
-  .second-section .grid-style {
+  
+  .bold {
+    font-weight: bold;
+  }
+  .dark-mode {
+    color: white;
+    background-color: #15202b;
+  }
+  .seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: "Asap", sans-serif;
+  }
+  /* Navbar */
+  .navbar {
+    max-width: 100rem;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-collapse {
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+  }
+  /*############        principal     ##############*/
+  section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .nombre {
+    font-weight: 600;
+  }
+  .principal-section {
+    min-height: 450px;
+    text-align: center;
+    font-family: "Asap", sans-serif;
+    position: relative;
+  }
+  
+  .principal-section h4{
+    padding: 1rem 0;
+  }
+  
+  .principal-icons i{
+    padding-left: 2rem;
+  }
+  
+  .principal {
+    padding: 3rem;
+    height: 100vh;
+  }
+  
+  .foto {
+    border-radius: 50%;
+    width: 250px;
+    height: 280px;
+    margin: 20px;
+    -webkit-transform: rotate(3deg);
+  }
+  .principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+  }
+  
+  .principal-buttons{
+    display:flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
   }
+  
+  .principal-buttons a{ 
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+    border: 2px solid var(--ligth-pink);
+    color: var(--dark-letter);
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+  }
+  .principal-buttons a:hover {
+    color: white;
+    background-color: #1976D2;
+  }
+  
+  /* ######                       Formacion second       #########*/
+  /* .second-section {
+    border-top: 1px solid #6464644d;
+  } */
+  
+  .second-section .grid-style {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 40% 60%;
+  }
+  
+  .grid-style{
+    gap: 1.5rem;
+  }
+  
+  .formacion {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  
   .formacion .servicio-social {
-    padding: 5px 30px 5px;
+    padding: 5px 20px 5px;
   }
-}
+  
+  .servicio-social {
+    border-top: 1px solid #f55;
+  }
+  .titulo-dgei {
+    text-align: left;
+  }
+  .actividades {
+    text-align: justify;
+  }
+  .contenedor .formacion {
+    font-size: var(--lg);
+  }
+  .formacion p:nth-child(2),
+  p:nth-child(3),
+  p:nth-child(4) {
+    margin-bottom: -3px;
+  }
+  
+  /* ######           Habilidades second       #########*/
+  .habilidades {
+    padding-left: 10px;
+    padding-right: 5px;
+    grid-row: 1/3;
+  }
+  
+  .item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+  .item .texto-habilidades {
+    text-align: left;
+  }
+  .item i {
+    font-size: 35px;
+  }
+  .item p:nth-child(1) {
+    margin-bottom: -5px;
+  }
+  
+  /* ######           conocimientos       #########*/
+  .conocimientos {
+    padding: 40px;
+  }
+  .conocimientos h2 {
+    font-family: "Asap", sans-serif;
+    font-weight: 600;
+  }
+  .conocimientos .columna {
+    padding: 20px;
+    border: 2px solid #6464644d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+  }
+  .conocimientos .columna:hover {
+    color: white;
+    background-color: #333;
+  }
+  .conocimientos .titulo {
+    font-size: var(--xxlg);
+    margin: 10px 0;
+  }
+  .columna img {
+    height: 12rem;
+    width: 12rem;
+  }
+  .badges-contenedor {
+    font-size: var(--lg);
+    margin: 10px 0;
+  }
+  .badge {
+    margin: 5px;
+  }
+  
+  /* ##########    Pie de pagina ###########*/
+  footer {
+    min-height: 300px;
+  }
+  
+  .redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  .redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+  }
+  .redes-sociales a:hover {
+    color: #fff;
+    background-color: #006299;
+    border-color: #006299;
+  }
+  
+  .derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+  }
+  
+  /* ##########      breakpoints     ############ */
+  @media screen and (max-width: 575px) {
+    .navbar-brand {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 666px) {
+    .second-section .grid-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .formacion .servicio-social {
+      padding: 5px 30px 5px;
+    }
+  }
+  

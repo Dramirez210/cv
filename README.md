@@ -1,9 +1,9 @@
 # Currículum Vitae
 
+#### Ingenieria en software (en curso 10mo semestre)
+
 #### Universidad Autónoma de la Ciudad de México
 
-#### Ingenieria en software
+#### Nombre: Daniel Ramírez
 
-#### Nombre: Daniel Ramírez Sánchez
-
-### Hiperenlace: https://dramirez210.github.io/cv/
+### CV: https://dramirez210.github.io/cv/
